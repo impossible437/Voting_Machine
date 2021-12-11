@@ -1,2 +1,2 @@
 # Voting_Machine
-Blockchain Voting System
+Blockchain based System
