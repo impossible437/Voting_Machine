@@ -8,19 +8,25 @@ contract Election {
         uint voteCount;
     }
 
-    // Store accounts that have voted
+    // Store accounts address that have been voted
     mapping(address => bool) public voters;
     // Store Candidates
-    // Fetch Candidate
     mapping(uint => Candidate) public candidates;
     // Store Candidates Count
     uint public candidatesCount;
-
     // voted event
-    event votedEvent (
+    event votedEvent 
+    (
         uint indexed _candidateId
     );
     
+
+    //To add new candidates
+    function addCandidate (string memory _name) private {
+        candidatesCount ++;
+        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
+        }
+
     constructor () public {
         addCandidate("IIIT_V Candidate");
         addCandidate("IIT_GN Candidate");
@@ -30,12 +36,6 @@ contract Election {
         addCandidate("ADANI_AMD Candidate");
         addCandidate("AU_AMD Candidate");
     }
-
-    function addCandidate (string memory _name) private {
-        candidatesCount ++;
-        candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
-        }
-
 
     function vote (uint _candidateId) public {
         // require that they haven't voted before
