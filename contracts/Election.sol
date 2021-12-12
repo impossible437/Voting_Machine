@@ -22,13 +22,13 @@ contract Election {
     );
     
     constructor () public {
-        addCandidate("IIIT V");
-        addCandidate("IIT GN");
-        addCandidate("DAIICT GN");
-        addCandidate("NIRMA AMD");
-        addCandidate("PDPU GN");
-        addCandidate("ADANI AMD");
-        addCandidate("AU AMD");
+        addCandidate("IIIT_V Candidate");
+        addCandidate("IIT_GN Candidate");
+        addCandidate("DAIICT_GN Candidate");
+        addCandidate("NIRMA_AMD Candidate");
+        addCandidate("PDPU_GN Candidate");
+        addCandidate("ADANI_AMD Candidate");
+        addCandidate("AU_AMD Candidate");
     }
 
     function addCandidate (string memory _name) private {
