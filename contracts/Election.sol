@@ -22,11 +22,16 @@ contract Election {
     );
     
     constructor () public {
-        addCandidate("Candidate 1");
-        addCandidate("Candidate 2");
+        addCandidate("IIIT V");
+        addCandidate("IIT GN");
+        addCandidate("DAIICT GN");
+        addCandidate("NIRMA AMD");
+        addCandidate("PDPU GN");
+        addCandidate("ADANI AMD");
+        addCandidate("AU AMD");
     }
 
-      function addCandidate (string memory _name) private {
+    function addCandidate (string memory _name) private {
         candidatesCount ++;
         candidates[candidatesCount] = Candidate(candidatesCount, _name, 0);
         }
